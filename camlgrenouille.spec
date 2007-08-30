@@ -86,7 +86,7 @@ Icon=%{name}
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=X-MandrivaLinux-Internet
+Categories=X-MandrivaLinux-Internet;
 EOF
 
 %post
