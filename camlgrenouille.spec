@@ -1,7 +1,7 @@
 %define name camlgrenouille
 
-%define version 1.27
-%define release %mkrel 2
+%define version 1.28
+%define release %mkrel 1
 
 %define title   Camlgrenouille
 %define longtitle Broadband connection test program
@@ -12,9 +12,9 @@ Version:        %version
 Release:        %release
 License:        GPL
 Group:          Networking/Other
-Url:		http://alan.petitepomme.net/%name/
+Url:		http://devel.grenouille.com/Camlgrenouille.php
 
-Source0:        %name.tar.bz2
+Source0:        http://devel.grenouille.com/pub/camlgrenouille/sources/%{name}-%{version}.tar.gz
 # Make 3 icons %name-{16,32,48}.png and then tar cjf %name-icons.tar.bz2 *png
 Source1:        %name-icons.tar.bz2
 Source2:	%name-missing-files.tar.bz2
@@ -27,17 +27,16 @@ Requires: rxvt
 %description
 This software is meant to test for your broadband connection,
 and sends the results to www.grenouille.com
-# Put the  description here.
 
 %prep
 rm -rf $RPM_BUILD_ROOT
 #unpack source, icons and missing files:
-%setup -q -b2 -a1 -n %name-mac_os_x-%version
+%setup -q -b2 -a1 -n %{name}-%{version}
 
 %build
 touch build_linux
-%make depend
-%make
+make depend
+make
 
 %install
 #installation des executables
