@@ -19,7 +19,6 @@ Source0:        http://devel.grenouille.com/pub/camlgrenouille/sources/%{name}-%
 Source1:        %name-icons.tar.bz2
 Source2:	%name-missing-files.tar.bz2
 
-BuildRoot:      %_tmppath/%name-buildroot
 
 Buildrequires: ocaml
 Requires: rxvt
