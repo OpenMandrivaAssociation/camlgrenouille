@@ -63,17 +63,6 @@ install -D -m 644 %{name}-16.png $RPM_BUILD_ROOT%{_miconsdir}/%{name}.png
 # Menu
 # Every entry must be changed according package specfications
 # Pay attention to "section" "command" and "longtitle"
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat > $RPM_BUILD_ROOT%{_menudir}/%{name} << EOF
-?package(%name): \
-command="%{_bindir}/%{name} -f %{_sysconfdir}/%{name}/user.config" \
-needs="text" \
-icon="%{name}.png" \
-section="Internet/Other" \
-title="%{title}" \
-longtitle="%{longtitle}" \
-xdg="true"
-EOF
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -103,7 +92,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc script_demarrage.sh
 %_bindir/*
 %config(noreplace) %_sysconfdir/*
-%_menudir/%name
 %{_datadir}/applications/mandriva-%{name}.desktop
 %_miconsdir/%name.png
 %_iconsdir/%name.png
