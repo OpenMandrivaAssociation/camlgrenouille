@@ -1,7 +1,7 @@
 %define name camlgrenouille
 
 %define version 1.28
-%define release %mkrel 1
+%define release %mkrel 3
 
 %define title   Camlgrenouille
 %define longtitle Broadband connection test program
