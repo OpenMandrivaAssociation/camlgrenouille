@@ -12,7 +12,7 @@ Version:        %version
 Release:        %release
 License:        GPL
 Group:          Networking/Other
-Url:		http://devel.grenouille.com/Camlgrenouille.php
+Url:		https://devel.grenouille.com/Camlgrenouille.php
 
 Source0:        http://devel.grenouille.com/pub/camlgrenouille/sources/%{name}-%{version}.tar.gz
 # Make 3 icons %name-{16,32,48}.png and then tar cjf %name-icons.tar.bz2 *png
