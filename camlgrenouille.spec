@@ -21,6 +21,7 @@ Source2:	%name-missing-files.tar.bz2
 
 BuildRoot:      %_tmppath/%name-buildroot
 
+BuildRequires:	make
 Buildrequires: ocaml
 Requires: rxvt
 
